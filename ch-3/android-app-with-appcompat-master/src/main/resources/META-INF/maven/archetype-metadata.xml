@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+	name="app"
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<requiredProperties>
+		<requiredProperty key="android-api-level">
+			<defaultValue>19</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="android-support-version">
+			<defaultValue>20.0.0</defaultValue>
+		</requiredProperty>
+	</requiredProperties>
+	
+	<fileSets>
+		<fileSet encoding="UTF-8">
+			<directory>.settings</directory>
+			<includes>
+				<include>**/*.prefs</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory></directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+	<modules>
+		<module id="${rootArtifactId}-app" dir="__rootArtifactId__-app"
+			name="${rootArtifactId}-app">
+			<fileSets>
+				<fileSet filtered="true" packaged="true" encoding="UTF-8">
+					<directory>src/main/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" packaged="true" encoding="UTF-8">
+					<directory>src/test/java</directory>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-sw600dp</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/layout</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-sw720dp-land</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/menu</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-v11</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-v14</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>res/drawable-xhdpi</directory>
+					<includes>
+						<include>**/*.png</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>res/drawable-hdpi</directory>
+					<includes>
+						<include>**/*.png</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>res/drawable-xxhdpi</directory>
+					<includes>
+						<include>**/*.png</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>res/drawable-mdpi</directory>
+					<includes>
+						<include>**/*.png</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>.settings</directory>
+					<includes>
+						<include>**/*.prefs</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>.classpath</include>
+						<include>.project</include>
+						<include>AndroidManifest.xml</include>
+						<include>project.properties</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+		<module id="${rootArtifactId}-app-test" dir="__rootArtifactId__-app-test"
+			name="${rootArtifactId}-app-test">
+			<fileSets>
+				<fileSet filtered="true" packaged="true" encoding="UTF-8">
+					<directory>src/main/java</directory>
+					<includes>
+						<include>**/*.java</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res</directory>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>.settings</directory>
+					<includes>
+						<include>**/*.prefs</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>.classpath</include>
+						<include>.project</include>
+						<include>AndroidManifest.xml</include>
+						<include>project.properties</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+		<module id="${rootArtifactId}-appcompat" dir="__rootArtifactId__-appcompat"
+			name="${rootArtifactId}-appcompat">
+			<fileSets>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-sw600dp</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-el</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-nb</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/layout-v11</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-am</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-km-rKH</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-zh-rHK</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/layout-v14</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-mn-rMN</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-ar</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-es</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-ja</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-nl</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-v11</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-af</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-v14</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/layout</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-iw</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-uk</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-ms-rMY</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/drawable</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-fa</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-large</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-in</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-fi</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/anim</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-it</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-sw</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-zh-rCN</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-w480dp</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-ka-rGE</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-bg</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-fr</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-zh-rTW</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-pt-rPT</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/color</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-th</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-ca</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-tl</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-tr</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-en-rIN</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-w500dp</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-cs</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-pl</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-sl</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-sk</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-de</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-xlarge</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-da</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-w720dp</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-w600dp</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-sv</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-hi</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-ko</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-sr</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-vi</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-zu</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-large-v14</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-hr</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-w360dp</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-hy-rAM</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-es-rUS</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-hu</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-et-rEE</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-pt</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-en-rGB</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-lo-rLA</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-ru</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-lv</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-fr-rCA</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-land</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-lt</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory>res/values-ro</directory>
+					<includes>
+						<include>**/*.xml</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>res/drawable-xhdpi</directory>
+					<includes>
+						<include>**/*.png</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>res/drawable-hdpi</directory>
+					<includes>
+						<include>**/*.png</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>res/drawable-xxhdpi</directory>
+					<includes>
+						<include>**/*.png</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>res/drawable-mdpi</directory>
+					<includes>
+						<include>**/*.png</include>
+					</includes>
+				</fileSet>
+				<fileSet encoding="UTF-8">
+					<directory>.settings</directory>
+					<includes>
+						<include>**/*.prefs</include>
+					</includes>
+				</fileSet>
+				<fileSet filtered="true" encoding="UTF-8">
+					<directory></directory>
+					<includes>
+						<include>.classpath</include>
+						<include>.project</include>
+						<include>AndroidManifest.xml</include>
+						<include>project.properties</include>
+					</includes>
+				</fileSet>
+			</fileSets>
+		</module>
+	</modules>
+</archetype-descriptor>

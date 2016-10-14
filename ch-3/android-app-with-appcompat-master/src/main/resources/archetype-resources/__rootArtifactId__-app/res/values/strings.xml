@@ -1,0 +1,13 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">${parentArtifactId}</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hit_text1">Press \'Hello world!\' button</string>
+    <string name="hit_text2">Button is pressed</string>
+
+</resources>

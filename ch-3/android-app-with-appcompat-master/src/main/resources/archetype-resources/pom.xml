@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>${groupId}</groupId>
+	<artifactId>${artifactId}</artifactId>
+	<version>${version}</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<android.jar.version>#if(${android-api-level} == "8") 2.2_r3
+			#elseif(${android-api-level} == "10") 2.3.3_r2
+			#elseif(${android-api-level} == "17") 4.2.2_r2
+			#elseif(${android-api-level} == "18") 4.3_r2
+			#elseif(${android-api-level} == "19") 4.4.2_r3
+			#elseif(${android-api-level} == "20") L_r3
+			#end</android.jar.version>
+		<android.plugin.version>3.9.0-rc.2</android.plugin.version>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+					<artifactId>android-maven-plugin</artifactId>
+					<version>${android.plugin.version}</version>
+					<configuration>
+						<sdk>
+							<platform>${android-api-level}</platform>
+						</sdk>
+						<zipalign>
+							<verbose>true</verbose>
+						</zipalign>
+						<undeployBeforeDeploy>true</undeployBeforeDeploy>
+						<mergeManifests>true</mergeManifests>
+					</configuration>
+					<extensions>true</extensions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.jayway.maven.plugins.android.generation2</groupId>
+										<artifactId>android-maven-plugin</artifactId>
+										<versionRange>[3.8.2,)</versionRange>
+										<goals>
+											<goal>consume-aar</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>android</groupId>
+				<artifactId>android</artifactId>
+				<version>${android.jar.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>android.support</groupId>
+				<artifactId>compatibility-v4</artifactId>
+				<version>${android-support-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>android.support</groupId>
+				<artifactId>compatibility-v7-appcompat</artifactId>
+				<version>${android-support-version}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>android.support</groupId>
+				<artifactId>compatibility-v7-appcompat</artifactId>
+				<version>${android-support-version}</version>
+				<type>aar</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
