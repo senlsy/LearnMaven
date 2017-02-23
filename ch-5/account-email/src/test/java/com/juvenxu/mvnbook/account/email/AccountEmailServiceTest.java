@@ -32,6 +32,7 @@ public class AccountEmailServiceTest
         
         ApplicationContext ctx=new ClassPathXmlApplicationContext("account-email.xml");
         AccountEmailService accountEmailService=(AccountEmailService)ctx.getBean("accountEmailService");
+
         String subject="Test Subject";
         String htmlText="<h3>Test</h3>";
         accountEmailService.sendMail("test2@juvenxu.com", subject, htmlText);
