@@ -4,9 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
+    <!--加载本地service.properties配置文件-->
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:service.properties"/>
+        <property name="location" value="classpath:service.properties" />
     </bean>
 
     <!--
@@ -14,18 +15,21 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
     class：实例对象的类
     <property> name:需要注入的成员名，value：注入的值，ref：注入引用类型值。
     -->
+
+    <!--创建AccountEmailServiceImpl类实例对象accountEmailService，并注入javaMailSender和systemEmail-->
     <bean id="accountEmailService"
           class="com.juvenxu.mvnbook.account.email.AccountEmailServiceImpl">
-        <property name="javaMailSender" ref="javaMailSender"/><!--引用下面id为javaMailSender实例对象-->
-        <property name="systemEmail" value="${email.systemEmail}"/>
+        <property name="javaMailSender" ref="javaMailSender" /><!--引用下面id为javaMailSender实例对象-->
+        <property name="systemEmail" value="${email.systemEmail}" />
     </bean>
 
+    <!--创建JavaMailSenderImpl类实例javaMailSender，并将对javaMailSender的属性进行配置-->
     <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-        <property name="protocol" value="${email.protocol}"/>
-        <property name="host" value="${email.host}"/>
-        <property name="port" value="${email.port}"/>
-        <property name="username" value="${email.username}"/>
-        <property name="password" value="${email.password}"/>
+        <property name="protocol" value="${email.protocol}" />
+        <property name="host" value="${email.host}" />
+        <property name="port" value="${email.port}" />
+        <property name="username" value="${email.username}" />
+        <property name="password" value="${email.password}" />
         <property name="javaMailProperties">
             <props>
                 <prop key="mail.${email.protocol}.auth">${email.auth}</prop>
