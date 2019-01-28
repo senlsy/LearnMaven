@@ -38,6 +38,8 @@ public class AccountEmailServiceTest {
     public void testSendMail() throws Exception {
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext("account-email.xml");
+
+        //通过Spring的IOC获得AccountEmailService的实现类对象
         AccountEmailService accountEmailService = (AccountEmailService) ctx.getBean("accountEmailService");
         String subject = "Test Subject";
         String htmlText = "<h3>Test</h3>";
